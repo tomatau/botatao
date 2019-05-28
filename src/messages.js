@@ -16,7 +16,7 @@ Supply a name for the reaction and a space separated list of emoji characters.
 **React to a message**
 Supply a message id and the name of a saved reaction.
 \`\`\`css
-!react [msg-id] [reaction-name]
+!react [msg-id] [reaction-name] ?[channel-id]
 \`\`\`
 `;
 
