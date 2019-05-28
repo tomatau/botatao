@@ -51,3 +51,5 @@ discordClient.on('message', msg => {
 })
 
 discordClient.login(process.env.DISCORD_TOKEN)
+
+require('http').createServer().listen(process.env.PORT || 3000)
