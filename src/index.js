@@ -25,8 +25,7 @@ discordClient.on('message', msg => {
   const { content, author, channel } = msg
 
   if (author.bot) return
-  // console.log(channel.guild.ownerID)
-  // if (channel.guild.ownerID !== author.id && author.username !== 'tomatao') return
+  if (channel.guild.ownerID !== author.id && author.username !== 'tomatao') return
 
   if (content.startsWith('?commands')
     || content.startsWith('!help')) {
