@@ -3,6 +3,11 @@ const db = require('../db')
 
 /**
  * Add reaction
+ *
+ * ```
+ * !add-reaction name ...reactions
+ * ```
+ *
  * @param {msg} msg
  */
 async function addReaction(msg) {

@@ -4,6 +4,8 @@ const db = require('./db')
 const addReaction = require('./actions/add-reaction')
 const listReactions = require('./actions/list-reactions')
 const react = require('./actions/react')
+const re = require('./actions/re')
+const clearReactions = require('./actions/clear-reactions')
 const showCommands = require('./actions/show-commands')
 
 const discordClient = new Discord.Client()
@@ -46,6 +48,12 @@ discordClient.on('message', msg => {
 
   if (content.startsWith('!react')) {
     react(msg)
+  } else if (content.startsWith('!re')) {
+    re(msg)
+  }
+
+  if (content.startsWith('!clear-reactions')) {
+    clearReactions(msg)
   }
 })
 
