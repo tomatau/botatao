@@ -38,6 +38,10 @@ discordClient.on('message', msg => {
     msg.reply('Pong!')
   }
 
+  if (content.startsWith('!say-hello')) {
+    msg.channel.send('Hello :D')
+  }
+
   if (content.startsWith('!add-reaction')) {
     addReaction(msg)
   }
